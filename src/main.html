@@ -1,0 +1,18 @@
+<main>
+  <h1>Angular Modal</h1>
+  <button type="button" (click)="openModal()">Open Modal</button>
+  <div
+    #lightbox
+    *ngIf="modalOpen"
+    [ngClass]="{'show-lightbox': showModal}"
+    class="background"
+  ></div>
+  <div
+    #modal
+    *ngIf="modalOpen"
+    [ngClass]="{'show-modal': showModal}"
+    class="modal"
+  >
+    <span (click)="closeModal()">&#10060;</span>
+  </div>
+</main>
