@@ -10,8 +10,8 @@ import { bootstrapApplication } from '@angular/platform-browser';
   templateUrl: './main.html',
 })
 export class App {
-  @ViewChild('modal', { static: false }) modal?: ElementRef;
   @ViewChild('lightbox', { static: false }) lightbox?: ElementRef;
+  @ViewChild('modal', { static: false }) modal?: ElementRef;
   modalOpen: boolean = false;
   showModal: boolean = false;
   loader: boolean = false;
@@ -24,11 +24,11 @@ export class App {
   closeModal() {
     this.showModal = false;
     this.loader = true;
-    this.modal!.nativeElement.classList.add('hide-modal');
     this.lightbox!.nativeElement.classList.add('hide-lightbox');
+    this.modal!.nativeElement.classList.add('hide-modal');
     setTimeout(() => {
-      this.loader = false
       this.modalOpen = false;
+      this.loader = false;
     }, 1500);
   }
 }
