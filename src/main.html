@@ -2,7 +2,8 @@
 
 <main>
   <h1>Angular Modal</h1>
-  <button type="button" (click)="openModal()">Open Modal</button>
+  <button type="button" *ngIf="!loader" (click)="openModal()">Open Modal</button>
+  <div *ngIf="loader" class="loader" ><img src="https://i.gifer.com/VAyR.gif" /></div>
   <div
     #lightbox
     *ngIf="modalOpen"

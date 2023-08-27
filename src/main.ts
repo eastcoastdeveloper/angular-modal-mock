@@ -14,6 +14,7 @@ export class App {
   @ViewChild('lightbox', { static: false }) lightbox?: ElementRef;
   modalOpen: boolean = false;
   showModal: boolean = false;
+  loader: boolean = false;
 
   openModal() {
     this.modalOpen = true;
@@ -22,9 +23,11 @@ export class App {
 
   closeModal() {
     this.showModal = false;
+    this.loader = true;
     this.modal!.nativeElement.classList.add('hide-modal');
     this.lightbox!.nativeElement.classList.add('hide-lightbox');
     setTimeout(() => {
+      this.loader = false
       this.modalOpen = false;
     }, 1500);
   }
