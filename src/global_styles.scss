@@ -45,13 +45,14 @@ main {
   .modal {
     background-color: white;
     border: 1px solid black;
+    z-index: 2;
     transform: scale(0);
-    height: calc(100% - 50px);
-    width: calc(100% - 50px);
+    height: calc(100% - 90px);
+    width: calc(100% - 90px);
     position: absolute;
     border-radius: 5px;
-    top: 25px;
-    left: 25px;
+    top: 45px;
+    left: 45px;
     span {
       cursor: pointer;
       padding: 3px 5px;
