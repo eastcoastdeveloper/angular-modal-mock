@@ -29,7 +29,7 @@ export class App {
     setTimeout(() => {
       this.modalOpen = false;
       this.loader = false;
-    }, 1000);
+    },300);
   }
 }
 
