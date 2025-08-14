@@ -26,6 +26,7 @@ export class App {
     this.loader = true;
     this.lightbox!.nativeElement.classList.add('hide-lightbox');
     this.modal!.nativeElement.classList.add('hide-modal');
+
     setTimeout(() => {
       this.modalOpen = false;
       this.loader = false;

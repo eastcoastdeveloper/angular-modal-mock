@@ -2,15 +2,18 @@
   <button type="button" *ngIf="!loader" (click)="openModal()">
     Open Modal
   </button>
+
   <div *ngIf="loader" class="loader">
     <img src="https://i.gifer.com/VAyR.gif" />
   </div>
+
   <div
     #lightbox
     *ngIf="modalOpen"
     [ngClass]="{'show-lightbox': showModal}"
     class="background"
   ></div>
+
   <div
     #modal
     *ngIf="modalOpen"
